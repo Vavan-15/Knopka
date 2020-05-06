@@ -1,0 +1,147 @@
+
+
+/*************************
+*******Typography******
+**************************/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100&subset=latin,cyrillic-ext,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+
+body{
+  font-family: sans-serif;
+  margin: 0;
+}
+.section {
+  height: 100vh;
+  background-color: #7b1fa2;
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+
+}
+.menu-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  top: 40px;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after   {
+  position: absolute;
+  top: 50%; margin-top: /* 1px; */    0;
+  left: 50%; margin-left: -10px;
+  width: 20px; 
+  height: 2px;                        transition: transform 0.3s ease-in, height 0.3s linear 0.4s;
+  background-color: #222;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  /* transition: 0.5s; */
+}
+.menu-btn span::before {
+  /* transform: translateY(-5px); */  top: -5px; transition: transform 0.3s ease-in, top 0.3s linear 0.3s;
+
+}
+.menu-btn span::after {  
+  /* transform: translateY(5px); */   top: 5px;  transition: transform 0.3s ease-in, top 0.3s linear 0.3s;
+}
+
+.menu-btn-active span {   
+  height: 0;              
+}
+
+.menu-btn-active span:before {
+  transform: rotate(45deg);     top: 0;  transition: top 0.3s linear, transform 0.3s ease-in 0.3s; 
+}
+
+.menu-btn-active span:after {
+  transform: rotate(-45deg);    top: 0;  transition: top 0.3s linear, transform 0.3s ease-in 0.3s; 
+} 
+
+
+/*   .menu-btn-active span:before {
+    transform: rotate(-35deg);
+    transform-origin: left top;
+    width: 10px;
+  }
+
+  .menu-btn-active span:after {
+    transform: rotate(35deg);
+    transform-origin: left bottom;
+    width: 10px;
+
+    }   */       
+
+
+
+    /* btn-search */
+
+    .wrap {
+      height: 8rem;
+      background-color: #BDB76B;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 8px;
+    }
+
+    .btn-search {
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .btn-search span:after,
+    .btn-search span:before {
+      content: '';
+      top: 50%; 
+      left: 50%;
+      position: absolute;
+      border: 2px solid #222;
+      transition: 0.3s;
+    }
+
+    .btn-search span:before {
+      border-radius: 50%;
+  /* margin-top: -16px;
+  margin-left: -18px; */
+  /* border: 2px solid #222; */
+  margin: -16px 0 0 -18px;
+  width: 22px;
+  height: 22px;
+}
+
+.btn-search span:after {
+/*   margin-top: 4px;
+margin-left: -2px; */
+/* border: 1px solid #222; */
+margin: 4px 0 0 -2px;
+width: 12px;
+transform: rotate(45deg); 
+}
+
+.btn-search-active span:before {
+  border-radius: 0;
+  transform: rotate(-45deg);
+}
+
+.btn-search-active span:after,
+.btn-search-active span:before {
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -15px;
+  border: 1.5px solid #222;                     
+  background-color: #222;
+  width: 30px;
+  height: 1px;
+}

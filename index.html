@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Главная</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+  
+<body>
+
+    <div class="section">
+        <a href="" class="menu-btn">
+            <span></span>
+        </a>
+    </div>
+
+    <div class="wrap">
+        <a class="btn-search">
+            <span></span>
+        </a>
+    </div> 
+
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2015</p>
+                    <p class="pull-right">Курс PHP Start</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/Footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Подключаем jQuery -->
+    <!--   <script src="ht tps:// ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+    <!-- Подключаем Bootstrap JS -->
+<!--<script src="js/bootstrap.min.js"></script>
+-->
+
+<!-- <script>
+    $(document).ready(function() {
+        $('.menu-btn').click, (function($){
+        $(this).toggleClass('menu-btn-active');
+    }); 
+   });
+
+</script> -->
+
+<!-- <script>
+$(document).ready(function($) {
+    $('.menu-btn').click(function(event) {
+        $('.menu-btn').toggleClass('menu-btn-active');
+    });
+});
+</script> -->
+
+<script>
+    $(document).ready(function() {
+        $('.menu-btn').on('click', function(event) {
+            event.preventDefault();
+            $(this).toggleClass('menu-btn-active');
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.btn-search').on('click', function(event) {
+            event.preventDefault();
+            $(this).toggleClass('btn-search-active');
+        });
+    });
+</script>
+<!-- <script>
+    $(document).ready(function() {
+        $('.menu-btn').on('click',function(event) {
+            event.preventDefault();
+            $(this).toggleClass('menu-btn-active');
+        }); 
+    });
+
+</script> -->
+
+</body>
+</html>
